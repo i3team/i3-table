@@ -1,5 +1,7 @@
-import Table, { HeadCell, BodyCell } from "~/components/ui-kit/table/Table";
 
+_onSort = orderByAndOrderDir => {
+	// update object lên search model rồi get data
+}
 let dataList = [
 	{ id: 1, name: 'Quận 1', population: '1000', area: '1000', isSelected: true },
 	{ id: 2, name: 'Quận 2', population: '2000', area: '2000', isSelected: false },
@@ -12,6 +14,8 @@ let dataList = [
 return (
 	<Fragment>
 		<Table
+			onSort={this._onSort}
+			currentOrderBy={searchModel.orderBy}
 			paper
 			grid={[10, 15, 25, 25, 25]}
 			data={dataList}
@@ -28,9 +32,9 @@ return (
 						/>
 					</HeadCell>
 					<HeadCell align="left">ID</HeadCell>
-					<HeadCell align="left">Tên quận/TP</HeadCell>
-					<HeadCell align="left">Dân số (nghìn người)</HeadCell>
-					<HeadCell align="left">Diện tích (km2)</HeadCell>
+					<HeadCell sortable orderBy="Name" align="left">Tên quận/TP</HeadCell>
+					<HeadCell sortable orderBy="Population" align="left">Dân số (nghìn người)</HeadCell>
+					<HeadCell sortable orderBy="Area" align="left">Diện tích (km2)</HeadCell>
 				</Fragment>
 			)}
 			bodyRow={(row, index) => {
