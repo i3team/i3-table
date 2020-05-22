@@ -34,10 +34,18 @@ return (
 							}}
 						/>
 					</HeadCell>
-					<HeadCell align="left">ID</HeadCell>
-					<HeadCell sortable orderBy="Name" align="left">Tên quận/TP</HeadCell>
-					<HeadCell sortable orderBy="Population" align="left">Dân số (nghìn người)</HeadCell>
-					<HeadCell sortable orderBy="Area" align="left">Diện tích (km2)</HeadCell>
+					<HeadCell align="left">
+						ID
+					</HeadCell>
+					<HeadCell sortable orderBy="Name" align="left">
+						Tên quận/TP
+					</HeadCell>
+					<HeadCell sortable orderBy="Population" align="left">
+						Dân số (nghìn người)
+					</HeadCell>
+					<HeadCell sortable orderBy="Area" align="left">
+						Diện tích (km2)
+					</HeadCell>
 				</Fragment>
 			)}
 			bodyRow={(row, index) => {
