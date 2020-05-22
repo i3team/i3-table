@@ -18,4 +18,4 @@ Name | Type | Default | Description
 `rowClassName` | string | |
 
 ### Example
-[Xem](#https://github.com/i3team/i3-table/blob/master/Demo.jsx)
+[Xem tại đây](https://github.com/i3team/i3-table/blob/master/Demo.jsx)
