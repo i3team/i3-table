@@ -10,9 +10,6 @@ let dataList = [
 return (
 	<Fragment>
 		<Table
-			// classes={{
-			// 	table: classes.table
-			// }}
 			paper
 			grid={[10, 15, 25, 25, 25]}
 			data={dataList}
