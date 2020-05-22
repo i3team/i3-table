@@ -57,7 +57,7 @@ return (
 			)}
 			bodyRow={(row, index) => {
 				return (
-					<Fragment>
+					<Fragment> 
 						<BodyCell align="center">
 							<EHealthCheckbox
 								checked={row.isSelected}
