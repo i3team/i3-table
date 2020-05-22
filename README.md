@@ -16,7 +16,7 @@ Name | Type | Default | Description
 `onClickRow` | func |  | onClickRow(row, index)
 `stickyHeader` | bool |  `false` |
 `rowClassName` | string | |
-`onSort` | func | | hàm được invoke khi một `HeadCell` có prop `sortable = true` (xem props `HeadCell`) được click
+`onSort` | func | | hàm được invoke khi một `HeadCell` có prop `sortable = true` (xem props `HeadCell`) được click, parameter xem VD demo
 `currentOrderBy` | string | | chuỗi thể hiện data hiện tại đang được sort bằng trường nào ở Database
 
 ### Props HeadCell
