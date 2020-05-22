@@ -1,6 +1,7 @@
 
 _onSort = (direction, orderBy) => {
-	// direction là giá trị theo Enum `System.Web.Helpers.SortDirection`, lên Visual studio xem
+	// direction là giá trị theo Enum `System.Web.Helpers.SortDirection`
+	// https://github.com/aspnet/AspNetWebStack/blob/master/src/System.Web.Helpers/SortDirection.cs
 	// về phía front-end thì chỉ cần update direction này vào searchModel, trên back-end sẽ handle
 	// update object lên search model rồi get data
 }
