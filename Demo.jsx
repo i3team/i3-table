@@ -1,4 +1,4 @@
-import Table, { HeadCell, BodyCell } from "../../components/ui-kit/table/Table";
+import Table, { HeadCell, BodyCell } from "~/components/ui-kit/table/Table";
 
 let dataList = [
 	{ id: 1, name: 'Quận 1', population: '1000', area: '1000', isSelected: true },
