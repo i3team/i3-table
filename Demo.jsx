@@ -28,6 +28,7 @@ return (
 					<HeadCell align="center">
 						<EHealthCheckbox
 							checked={dataList.every(i => i.isSelected)}
+							indeterminate={dataList.some(i => i.isSelected) && !dataList.every(i => i.isSelected)}
 							onChange={e => {
 								this.overwriteList(dataList, dataList.map(i => ({ ...i, isSelected: e.target.checked })))
 							}}
