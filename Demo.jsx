@@ -29,8 +29,7 @@ return (
 						<EHealthCheckbox
 							checked={dataList.every(i => i.isSelected)}
 							onChange={e => {
-								let cmpr = (a, b) => a.id == b.id;
-								this.mergeList(dataList, dataList.map(i => ({ ...i, isSelected: e.target.checked })), cmpr)
+								this.overwriteList(dataList, dataList.map(i => ({ ...i, isSelected: e.target.checked })))
 							}}
 						/>
 					</HeadCell>
