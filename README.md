@@ -91,7 +91,7 @@ Name | Type  | Description
 `isSelectable` | bool | có hiện checkbox cho row tương ứng hay không | 
 `isDataItem` | bool | tham số này bằng true đối với những data mà api ứng với button cần xử lý | 
 `dataType` | ETableDataType | enum quy định kiểu dữ liệu của data (xem mục 4) |
-`children` | List<TableActionItem<X>> | danh sách con của data, không truyền nếu không có | 
+`children` | List<ActionTableItem<X>> | danh sách con của data, không truyền nếu không có | 
 
 ### 2.2 TableItem<X>
 Viết tương tự như mục 2.1 nhưng sử dụng hàm
