@@ -36,11 +36,11 @@ Name | Type | Default | Description
 ### 1.1 Nếu phục vụ cho table có checkbox để tick chọn thì T là ActionTableItem<X>
 ActionTableItem là một class chứa các thông tin cần thiết để JS render table (cấu trúc cha-con, quy định item nào render checkbox,...). 
 
-X bắt buộc là một class được kế thừa từ IActionItem (đọc thêm chú ý cuối mục này). Sở dĩ kế thừa interface IActionItem là để ràng buộc mỗi object dùng để render trong table phải luôn có 1 List<EActionPoints>, đây là thông tin để table biết phải xử lý object nào tương ứng với các nút ở drawer (vai trò tương tự thông tin phân quyền của object đó, đọc thêm ở mục 3).
+X bắt buộc là một class được kế thừa từ IActionItem (đọc thêm chú ý cuối mục này). Sở dĩ kế thừa interface IActionItem là để ràng buộc mỗi object dùng để render trong table phải luôn có 1 List EActionPoints, đây là thông tin để table biết phải xử lý object nào tương ứng với các nút ở drawer (vai trò tương tự thông tin phân quyền của object đó, đọc thêm ở mục 3).
 
 Chú ý: các cách để class kế thừa từ IActionItem
 #### a) Các class đang có sẵn [DataContract], [DataMember]: kế thừa từ BaseDataMemberActionItem
-Class có [DataContract] nên được kế thừa từ class có [DataContract] nên đã tạo sẵn class BaseDataMemberActionItem để kế thừa cho nhanh. Class này đã implement List<EActionPoint> từ IActionItem và gắn [DataMember] cho trường đó.
+Class có [DataContract] nên được kế thừa từ class có [DataContract] nên đã tạo sẵn class BaseDataMemberActionItem để kế thừa cho nhanh. Class này đã implement List EActionPoint từ IActionItem và gắn [DataMember] cho trường đó.
 
 Đối với những class POCO thì tạo file partial và kế thừa.
 
@@ -97,8 +97,8 @@ Name | Type  | Description
 Viết tương tự như mục 2.1 nhưng sử dụng hàm
 TableItemHelper.GetInstance, hàm này chỉ có 3 tham số là data, getKey và children
 
-## 3. List <EActionPoint> dùng để làm gì? Sử dụng ra sao?
-Trường ActionPoints có kiểu dữ liệu List<EActionPoint> dùng để quy định object data tương ứng có thể được thực hiện bởi những action nào. Mỗi button trong drawer sẽ tương ứng với một EActionPoint, từ đó JS có thể xử lý để trả ra các key tương ứng khi nút được click (giá trị của key dựa vào hàm getKey, xem thêm mục 4).
+## 3. List EActionPoint dùng để làm gì? Sử dụng ra sao?
+Trường ActionPoints có kiểu dữ liệu List EActionPoint  dùng để quy định object data tương ứng có thể được thực hiện bởi những action nào. Mỗi button trong drawer sẽ tương ứng với một EActionPoint, từ đó JS có thể xử lý để trả ra các key tương ứng khi nút được click (giá trị của key dựa vào hàm getKey, xem thêm mục 4).
 
 Do EActionPoint là enum dùng chung cho tất cả các nhóm nên việc thêm giá trị cho nó phải tuân thủ cách viết chung để dễ kiểm soát sau này:
 
