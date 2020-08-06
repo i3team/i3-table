@@ -56,7 +56,7 @@ public class Test: TestClass, IActionItem
     }
 ```
 
-### 1.2 Nếu chỉ để render data, không cần tick chọn thì T là TableItem<X>
+### 1.2 Nếu chỉ để render data, không cần tick chọn thì T là ```TableItem<X>```
 
 Trong đó X là một class tùy chọn, không ràng buộc như mục 1.1
 
