@@ -127,6 +127,42 @@ getKey là một function trả về string với param đầu vô là object da
 - Quy tắc thêm giá trị cho EDataType tương tự như EActionPoint (không có js)
 
 
+## 5. Example
 
+```cshaph
+[HttpGet]
+        public List<IBaseTableItem> Test()
+        {
+            var list = new List<PackageBatchModel>();
+            list.Add(new PackageBatchModel()
+            {
+                PackageDetail = new List<ConsumableInPackage>()
+                {
+                    new ConsumableInPackage()
+                    {
+
+                    },
+                    new ConsumableInPackage()
+                    {
+
+                    }
+                }
+            });
+            var result = list.Select(i => TableItemHelper.GetActionInstance(
+                        i,
+                        m => m.Id.ToString(),
+                        isSelectable: true,
+                        isDataItem: false,
+                        dataType: ETableDataType.Test1,
+                        i.PackageDetail.Select(j => TableItemHelper.GetActionInstance(
+                            j,
+                            m => m.GetKey(),
+                            isSelectable: true,
+                            isDataItem: false,
+                            dataType: ETableDataType.Test2)).ToList())).ToList().Cast<IBaseTableItem>().ToList();
+
+            return result;
+        }
+```
 
 
