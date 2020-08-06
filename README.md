@@ -68,7 +68,7 @@ Giả sử ServiceHost trả về một danh sách dữ liệu là List<Test>, m
 
 
 ```cshaph
-var returnData = x.Select(i => TableItemHelper.GetInstance(
+var returnData = x.Select(i => TableItemHelper.GetActionInstance(
     					data: i,
     					getKey: m => m.Id,
     					isSelectable: true,
@@ -95,7 +95,7 @@ Name | Type  | Description
 
 ### 2.2 TableItem<X>
 Viết tương tự như mục 2.1 nhưng sử dụng hàm
-TableItemHelper.GetActionInstance, hàm này chỉ có 3 tham số là data, getKey và children
+TableItemHelper.GetInstance, hàm này chỉ có 3 tham số là data, getKey và children
 
 ## 3. List<EActionPoint> dùng để làm gì? Sử dụng ra sao?
 Trường ActionPoints có kiểu dữ liệu List<EActionPoint> dùng để quy định object data tương ứng có thể được thực hiện bởi những action nào. Mỗi button trong drawer sẽ tương ứng với một EActionPoint, từ đó JS có thể xử lý để trả ra các key tương ứng khi nút được click (giá trị của key dựa vào hàm getKey, xem thêm mục 4).
